@@ -1,7 +1,8 @@
-FROM openjdk:8-jre-alpine
-
+FROM node:alpine
 WORKDIR /app
+COPY package.json ./
+RUN npm install --production --no-optional --loglevel warn\
+ && npm cache clean --force
 
-COPY target/hello-bz-jar-with-dependencies.jar ./app.jar
-
-CMD ["java", "-jar", "app.jar"]
+COPY ./ ./
+CMD ["npm", "run", "start"]

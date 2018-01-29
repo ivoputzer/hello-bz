@@ -1,0 +1,31 @@
+{
+  "name": "hello-bz",
+  "version": "1.0.0",
+  "description": "hello bolzano",
+  "main": "index.js",
+  "config": {
+    "server": {
+      "port": "8080"
+    }
+  },
+  "scripts": {
+    "test": "m.test",
+    "start": "node index.js",
+    "docker": "docker run --rm -p 8080:8080 -t ${npm_package_name}",
+    "build": "docker build --rm -t ${npm_package_name} -f Dockerfile .",
+    "node": "node"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pdincau/hello-bz.git"
+  },
+  "author": "Ivo von Putzer Reibegg <ivo.putzer@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pdincau/hello-bz/issues"
+  },
+  "homepage": "https://github.com/pdincau/hello-bz#readme",
+  "devDependencies": {
+    "m.test": "0.0.57"
+  }
+}

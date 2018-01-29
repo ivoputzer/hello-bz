@@ -1,3 +1,2 @@
-.idea
-hello-atv.iml
-target
+.idea/
+node_modules/
